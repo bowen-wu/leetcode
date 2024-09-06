@@ -1,0 +1,9 @@
+title: LeetCode
+description: LeetCode Solutions
+
+# 导航栏设置
+nav:
+  - name: Home
+    url: /
+  - name: Solutions
+    url: /solutions/
