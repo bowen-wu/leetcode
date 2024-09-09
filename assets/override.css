@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container > * {
+    width: 100%;
+}
+
+/* 左右布局的 main 样式 */
+main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+main > * {
+    height: 100%;
+}
+
+.site-header {
+    border-top: none;
+    flex-shrink: 0;
+    min-height: 56px;
+}
+
+.wrapper {
+    padding: 12px;
+}
+
+.site-footer {
+    padding: 16px;
+}
+
+.content {
+    overflow-y: scroll;
+    flex: 1;
+}

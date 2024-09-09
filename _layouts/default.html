@@ -1,0 +1,64 @@
+<!-- _layouts/default.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}"/>
+    <link rel="stylesheet" href="{{ '/assets/nav.css' | relative_url }}"/>
+    <link rel="stylesheet" href="{{ '/assets/override.css' | relative_url }}"/>
+</head>
+<body>
+<div class="container">
+    <header class="site-header" role="banner">
+        <div class="wrapper">
+            <a class="site-title" rel="author" href="/leetcode/">LeetCode Solution</a>
+        </div>
+    </header>
+
+    <!-- 页面内容 -->
+    <main>
+        <!-- 在页面中加入导航 -->
+        {% include navigation.html %}
+
+        <div class="content">
+            <div class="wrapper">
+                {{ content }}
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer h-card">
+        <data class="u-url" href="/leetcode/"></data>
+
+        <div class="wrapper">
+            <h3 class="footer-heading">Contributors</h3>
+            <div class="footer-col-wrapper">
+                <div class="footer-col footer-col-2">
+                    <ul class="social-media-list">
+                        <li>
+                            <a href="https://github.com/bowen-wu">
+                                <svg class="svg-icon">
+                                    <use xlink:href="/leetcode/assets/minima-social-icons.svg#github"></use>
+                                </svg>
+                                <span class="username">bowen-wu</span></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/zpfate">
+                                <svg class="svg-icon">
+                                    <use xlink:href="/leetcode/assets/minima-social-icons.svg#github"></use>
+                                </svg>
+                                <span class="username">zpfate</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="{{ '/assets/nav.js' | relative_url }}"></script>
+</body>
+</html>

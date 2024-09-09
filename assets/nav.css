@@ -1,0 +1,98 @@
+/* 清除 ul, li, a 的默认样式 */
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none; /* 清除链接下划线 */
+    color: inherit; /* 使用父元素的颜色 */
+}
+
+/* 防止文字换行 */
+.nav-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    white-space: nowrap; /* 文字不换行 */
+    color: #333; /* 默认颜色 */
+    background-color: #fff; /* 背景色 */
+    border-bottom: 1px solid #ddd; /* 底部边框 */
+    transition: background-color 0.3s, padding-left 0.3s; /* 背景色和内边距过渡效果 */
+    cursor: pointer; /* 鼠标指针 */
+}
+
+.nav-link:hover {
+    background-color: #e6f7ff; /* 鼠标悬停效果 */
+}
+
+.nav-link::after {
+    content: ''; /* 使用 CSS 绘制箭头 */
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #333;
+    transition: transform 0.3s ease;
+}
+
+.nav-link.collapsed::after {
+    transform: rotate(0deg); /* 收起时箭头朝下 */
+}
+
+.nav-link:not(.collapsed)::after {
+    transform: rotate(180deg); /* 展开时箭头朝上 */
+}
+
+nav {
+    width: 250px; /* 根据需求设置宽度 */
+    background-color: #fff;
+    border-right: 1px solid #ddd; /* 右边界线 */
+    height: 100%; /* 高度占满视口 */
+    overflow-y: auto; /* 垂直滚动条 */
+    position: absolute; /* 让子元素的绝对定位相对于它 */
+}
+
+.wrapper {
+    flex: 1;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+/* 折叠菜单样式 */
+.nav-menu {
+    padding-left: 0; /* 移除内边距 */
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item ul {
+    padding-left: 0;
+    margin: 0;
+    border-left: 1px solid #ddd; /* 左边界线 */
+}
+
+.nav-item ul li {
+    margin: 0;
+}
+
+.nav-item ul li a {
+    padding: 10px 30px; /* 内边距 */
+    display: block;
+    color: #333; /* 链接颜色 */
+    background-color: #fff; /* 背景色 */
+}
+
+.nav-item ul li a:hover {
+    background-color: #e6f7ff; /* 鼠标悬停效果 */
+}
+
+.nav-item ul li a.active {
+    font-weight: bold;
+    color: #1890ff; /* 高亮颜色 */
+}

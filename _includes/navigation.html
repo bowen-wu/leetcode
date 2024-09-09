@@ -1,0 +1,13 @@
+<nav>
+    {% assign root_pages = site.pages | where: "parent", "/" %}
+    {% for page in root_pages %}
+    {% if page.name != '404.html' %}
+    {% assign children = site.pages | where: "parent", page.url %}
+    <ul class="nav-menu">
+        {% for child in children %}
+        {% include navigation_recursive.html item=child %}
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endfor %}
+</nav>

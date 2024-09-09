@@ -21,7 +21,6 @@
 title: LeetCode Solution
 baseurl: "/leetcode" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_username: bowen-wu
 
 # Build settings
 theme: minima
@@ -36,12 +35,13 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
 #   - node_modules/
 #   - vendor/bundle/
 #   - vendor/cache/
@@ -49,11 +49,5 @@ plugins:
 #   - vendor/ruby/
 
 # 使用 GitHub Flavored Markdown 解析器
-markdown: GFM
-
-# 导航栏设置
-nav:
-  - name: Home
-    url: "{{ site.baseurl }}/"
-  - name: Solutions
-    url: "{{ site.baseurl }}/solutions/"
+#markdown: GFM
+markdown: kramdown
