@@ -2,7 +2,7 @@
 layout: default
 title: "LeetCode Solutions"
 permalink: /solutions/
-parent: "/"  
+parent: "/" 
 ---
 
 # 解决方案汇总

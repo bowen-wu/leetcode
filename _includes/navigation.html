@@ -1,4 +1,5 @@
 <nav>
+    <pre>log: </pre>
     {% assign root_pages = site.pages | where: "parent", "/" %}
     {% for page in root_pages %}
     {% if page.name != '404.html' %}

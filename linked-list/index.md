@@ -2,7 +2,7 @@
 layout: default
 title: "Linked List"
 permalink: /linked-list/
-parent: ""
+parent: "/"
 ---
 
 # 链表解法

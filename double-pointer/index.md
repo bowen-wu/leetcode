@@ -2,7 +2,7 @@
 layout: default
 title: "Double Pointer"
 permalink: /double-pointer/
-parent: ""
+parent: "/"
 ---
 
 # 双指针解法
